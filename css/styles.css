@@ -554,3 +554,226 @@ body {
   background: #1e6091;
   color: white;
 }
+
+/* /css/styles.css (additional styles for about page – add to existing) */
+
+/* ---------- page banner (used on about, etc) ---------- */
+.page-banner {
+  padding: 4rem 0;
+  text-align: center;
+  color: white;
+}
+.page-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+.banner-divider {
+  width: 100px;
+  height: 5px;
+  background: #f4b942;
+  margin: 1rem auto;
+  border-radius: 10px;
+}
+.page-banner p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+/* ---------- overview section ---------- */
+.overview {
+  padding: 5rem 0;
+}
+.overview-grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+.overview-content h2 {
+  color: #05445e;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.overview-content p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+.overview-image img {
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 15px 15px 0 #e9c46a;
+}
+
+/* ---------- vision & mission side by side ---------- */
+.vision-mission {
+  background: #f0f7fc;
+  padding: 4rem 0;
+}
+.vm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.vm-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 12px 25px #05445e20;
+}
+.vm-card i {
+  margin-bottom: 1.2rem;
+}
+.vm-card h3 {
+  font-size: 2rem;
+  color: #05445e;
+  margin-bottom: 0.8rem;
+}
+.vm-card p {
+  font-size: 1.1rem;
+  color: #1f3a4b;
+}
+
+/* ---------- core values ---------- */
+.core-values {
+  padding: 5rem 0;
+  background: white;
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.value-item {
+  text-align: center;
+  background: #f6fbfe;
+  padding: 2rem 1.5rem;
+  border-radius: 40px;
+  transition: 0.2s;
+}
+.value-item:hover {
+  background: #e6f2fa;
+  transform: translateY(-6px);
+}
+.value-item i {
+  color: #1e6091;
+  margin-bottom: 1rem;
+}
+.value-item h4 {
+  font-size: 1.5rem;
+  color: #05445e;
+  margin-bottom: 0.5rem;
+}
+.value-item p {
+  color: #2d4b65;
+}
+
+/* ---------- headteacher message ---------- */
+.headteacher {
+  background: linear-gradient(145deg, #ffffff, #f2f9ff);
+  padding: 4rem 0;
+}
+.headteacher-grid {
+  display: grid;
+  gap: 2.5rem;
+  align-items: start;
+}
+.headteacher-image img {
+  width: 100%;
+  border-radius: 40px 40px 20px 20px;
+  box-shadow: 0 20px 30px #0b3b5c40;
+  border: 5px solid white;
+}
+.image-caption {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: #05445e;
+}
+.headteacher-message h2 {
+  color: #05445e;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.headteacher-message p {
+  font-size: 1.15rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+.signature {
+  font-style: italic;
+  font-weight: 600;
+  color: #1e6091;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+
+/* ---------- why choose us grid ---------- */
+.why-choose {
+  padding: 5rem 0;
+  background: #eaf3fa;
+}
+.choose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.choose-card {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 8px 20px #1e3b4c20;
+  transition: 0.2s;
+}
+.choose-card:hover {
+  transform: scale(1.02);
+  background: #d6ecfa;
+}
+.choose-card i {
+  color: #f4b942;
+  margin-bottom: 1rem;
+}
+.choose-card h4 {
+  color: #05445e;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- light call to action (alternative) ---------- */
+.cta-light {
+  background: #f4b942;
+  color: #05445e;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.cta-light p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.cta-light .btn-primary {
+  background: #05445e;
+  color: white;
+}
+.cta-light .btn-primary:hover {
+  background: #0f5a7a;
+}
+
+/* ---------- responsive adjustments ---------- */
+@media (min-width: 768px) {
+  .overview-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .headteacher-grid {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-banner h1 {
+    font-size: 2.2rem;
+  }
+}

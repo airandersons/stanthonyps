@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | St. Anthony's Mutungo</title>
+  <!-- Google Fonts + Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- external CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- navigation (consistent across all pages) -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo-area">
+        <img src="https://via.placeholder.com/50x50/2c7da0/ffffff?text=SA" alt="school logo" class="logo-img">
+        <span class="logo-text">ST. ANTHONY'S <small>Mutungo</small></span>
+      </div>
+      <button class="mobile-toggle" aria-label="menu" id="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HEADER BANNER ========== -->
+    <section class="page-banner" style="background: linear-gradient(135deg, #1e6091, #2a9d8f);">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <div class="banner-divider"></div>
+        <p>We'd love to hear from you — reach out anytime</p>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT INFORMATION CARDS ========== -->
+    <section class="contact-cards-section">
+      <div class="container">
+        <div class="contact-cards-grid">
+          <!-- Phone Card -->
+          <div class="contact-card">
+            <div class="card-icon">
+              <i class="fas fa-phone-alt fa-3x"></i>
+            </div>
+            <h3>Call or WhatsApp</h3>
+            <p><a href="tel:0775799466">0775 799466</a> (Headteacher)</p>
+            <p><a href="tel:0776695439">0776 695439</a> (Admissions)</p>
+            <p><a href="tel:0762453601">0762 453601</a> (Bursar)</p>
+            <p class="note">Mon–Fri, 8am–5pm</p>
+          </div>
+          <!-- Location Card -->
+          <div class="contact-card">
+            <div class="card-icon">
+              <i class="fas fa-map-marker-alt fa-3x"></i>
+            </div>
+            <h3>Visit our campus</h3>
+            <p>Mutungo – Biina Road</p>
+            <p>(opposite Biina Market)</p>
+            <p>Kampala, Uganda</p>
+            <p class="note">Open weekdays 8am–4pm</p>
+          </div>
+          <!-- Email Card -->
+          <div class="contact-card">
+            <div class="card-icon">
+              <i class="fas fa-envelope fa-3x"></i>
+            </div>
+            <h3>Email us</h3>
+            <p><a href="mailto:info@stanthonymutungo.sc.ug">info@stanthonymutungo.sc.ug</a></p>
+            <p><a href="mailto:admissions@stanthonymutungo.sc.ug">admissions@stanthonymutungo.sc.ug</a></p>
+            <p class="note">We reply within 24 hours</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT FORM + MAP SIDE BY SIDE ========== -->
+    <section class="contact-form-map">
+      <div class="container">
+        <div class="form-map-grid">
+          <!-- Contact Form -->
+          <div class="form-container">
+            <h2><i class="fas fa-paper-plane" style="color:#f4b942;"></i> Send us a message</h2>
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Your name *</label>
+                <input type="text" id="name" name="name" placeholder="e.g., John Mukasa" required>
+              </div>
+              <div class="form-group">
+                <label for="phone"><i class="fas fa-phone"></i> Phone number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="0772 123456" required>
+              </div>
+              <div class="form-group">
+                <label for="message"><i class="fas fa-comment"></i> Message *</label>
+                <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit"><i class="fas fa-paper-plane"></i> Send message</button>
+            </form>
+            <div id="form-feedback" class="form-feedback" style="display: none;"></div>
+          </div>
+
+          <!-- Map Placeholder Section -->
+          <div class="map-container">
+            <h2><i class="fas fa-map" style="color:#2a9d8f;"></i> Find us here</h2>
+            <div class="map-placeholder">
+              <!-- interactive map placeholder (static image with location icon) -->
+              <img src="https://via.placeholder.com/600x400/a8d5e5/1f3a4b?text=Map+of+Mutungo+%7C+Biina+Road" alt="Map showing school location" class="map-img">
+              <div class="map-overlay">
+                <i class="fas fa-map-pin"></i>
+                <span>St. Anthony's Mutungo</span>
+              </div>
+            </div>
+            <p class="map-note"><i class="fas fa-directions"></i> Biina Road, opposite Biina Market — easy to find!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SMALL CTA / VISIT PROMPT ========== -->
+    <section class="cta-light">
+      <div class="container">
+        <p>We welcome visits — come and see our happy school in person</p>
+        <a href="https://maps.google.com" target="_blank" class="btn btn-primary"><i class="fas fa-map-marked-alt"></i> Get directions</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer (consistent) -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>ST. ANTHONY’S MUTUNGO</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Mutungo – Biina Road</p>
+        <p><i class="fas fa-phone-alt"></i> 0775 799466 • 0776 695439 • 0762 453601</p>
+        <p><i class="fas fa-quote-right"></i> Quality Education is the Stepping Stone for your Child’s Future</p>
+        <p class="badge">GOD WITH US</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p style="margin-top: 1rem;">© 2025 St. Anthony’s. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- external javascript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

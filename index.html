@@ -38,19 +38,43 @@
   </header>
 
   <main>
-    <!-- hero section -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h1>ST. ANTHONY’S NURSERY & PRIMARY SCHOOL – MUTUNGO</h1>
-          <p class="motto">"Quality Education is the Stepping Stone for your Child’s Future"</p>
-          <div class="hero-buttons">
-            <a href="admissions.html" class="btn btn-primary">Apply Now <i class="fas fa-arrow-right"></i></a>
-            <a href="contact.html" class="btn btn-outline">Contact Us</a>
+    <!-- HERO SECTION - IMAGE CAROUSEL (6 landscape images) -->
+    <section class="hero-carousel">
+      <div class="carousel-container">
+        <div class="carousel-slides" id="carouselSlides">
+          <!-- 6 placeholder images with school-appropriate motifs -->
+          <div class="carousel-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://via.placeholder.com/1600x600/2a9d8f/ffffff?text=Happy+Pupils+%7C+Playtime');"></div>
+          <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://via.placeholder.com/1600x600/e9c46a/1f3a4b?text=Classroom+Learning');"></div>
+          <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://via.placeholder.com/1600x600/1e6091/ffffff?text=Brass+Band+Performance');"></div>
+          <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://via.placeholder.com/1600x600/f4a261/2d2d2d?text=Nursery+Outdoor+Play');"></div>
+          <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://via.placeholder.com/1600x600/9c89b8/ffffff?text=School+Choir');"></div>
+          <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://via.placeholder.com/1600x600/76c893/1e2b37?text=Sports+%26+Fun');"></div>
+        </div>
+
+        <!-- overlay content (positioned above slides) -->
+        <div class="carousel-overlay">
+          <div class="container overlay-content">
+            <h1>ST. ANTHONY’S NURSERY & PRIMARY SCHOOL – MUTUNGO</h1>
+            <p class="motto">"Quality Education is the Stepping Stone for your Child’s Future"</p>
+            <div class="hero-buttons">
+              <a href="admissions.html" class="btn btn-primary">Apply Now <i class="fas fa-arrow-right"></i></a>
+              <a href="contact.html" class="btn btn-outline">Contact Us</a>
+            </div>
           </div>
         </div>
-        <div class="hero-image">
-          <img src="https://via.placeholder.com/500x400/0b3b5c/ffffff?text=Happy+Kids" alt="happy children">
+
+        <!-- carousel navigation arrows -->
+        <button class="carousel-arrow prev" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-arrow next" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+
+        <!-- carousel indicators (dots) -->
+        <div class="carousel-indicators" id="carouselIndicators">
+          <span class="indicator active" data-index="0"></span>
+          <span class="indicator" data-index="1"></span>
+          <span class="indicator" data-index="2"></span>
+          <span class="indicator" data-index="3"></span>
+          <span class="indicator" data-index="4"></span>
+          <span class="indicator" data-index="5"></span>
         </div>
       </div>
     </section>
@@ -182,6 +206,6 @@
   </footer>
 
   <!-- external javascript -->
-  <script src="js/main.js"></script>
+  <script src="JS/main.js"></script>
 </body>
-  </html>
+</html>

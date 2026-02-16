@@ -1,76 +1,187 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>St. Anthony's Mutungo | God With Us</title>
-  <!-- Font Awesome Icons (separate resource) -->
+  <title>St. Anthony's – Mutungo | Home</title>
+  <!-- Google Fonts + Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- external CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- preloader / decorative bar -->
-  <div class="top-strip"></div>
-
-  <div class="main-container">
-    <!-- === HEADER WITH BADGE & CONTACT === -->
-    <header class="header">
-      <div class="badge-block">
-        <div class="badge-shield">
-          <span class="badge-line1">ST. ANTHONY’S</span>
-          <span class="badge-line2">NURSERY & PRIMARY SCH</span>
-          <span class="badge-line3">MUTUNGO</span>
-          <span class="badge-line4">GOD WITH US</span>
-        </div>
-        <div class="title-block">
-          <h1>St. Anthony’s <br><span>Nursery & Primary</span></h1>
-          <div class="motto-tag"><i class="fas fa-feather-alt"></i> God with us</div>
-        </div>
+  <!-- navigation bar (mobile‑friendly) -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo-area">
+        <!-- logo placeholder + school name (compact) -->
+        <img src="https://via.placeholder.com/50x50/2c7da0/ffffff?text=SA" alt="school logo" class="logo-img">
+        <span class="logo-text">ST. ANTHONY'S <small>Mutungo</small></span>
       </div>
-      <div class="contact-bar">
-        <span><i class="fas fa-phone-alt"></i> 0775 799466</span>
-        <span><i class="fas fa-phone-alt"></i> 0776 695439</span>
-        <span><i class="fas fa-phone-alt"></i> 0762 453601</span>
-      </div>
-    </header>
-
-    <!-- LOCATION RIBBON -->
-    <div class="location"><i class="fas fa-map-marker-alt"></i> Mutungo – Biina Road</div>
-
-    <!-- === IMAGE SHOWCASE (exact titles) === -->
-    <section class="gallery-section">
-      <h2 class="section-heading"><i class="fas fa-camera-retro"></i> Glimpses of our school</h2>
-      <div class="gallery-grid" id="galleryGrid">
-        <!-- filled from js -->
-      </div>
-    </section>
-
-    <!-- === SERVICES SECTION (colourful icons) === -->
-    <section class="services">
-      <h2 class="section-heading"><i class="fas fa-star"></i> We provide the following Services</h2>
-      <div class="services-grid">
-        <div class="service-card"><i class="fas fa-coins"></i> Affordable School fees.</div>
-        <div class="service-card"><i class="fas fa-smile-beam"></i> Friendly Environment.</div>
-        <div class="service-card"><i class="fas fa-paint-brush"></i> Inspiring Nursery Facilities.</div>
-        <div class="service-card"><i class="fas fa-chalkboard-teacher"></i> Experienced, determined & Caring Professional Teachers.</div>
-      </div>
-    </section>
-
-    <!-- === REGISTRATION NOTICE (vibrant) === -->
-    <div class="registration-banner" id="regBanner">
-      <i class="fas fa-pencil-alt"></i> REGISTRATION FOR BOTH NURSERY AND PRIMARY IN PROGRESS <i class="fas fa-pencil-alt"></i>
+      <button class="mobile-toggle" aria-label="menu" id="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <!-- === FOOTER WITH MOTTO === -->
-    <footer class="footer">
-      <p><i class="fas fa-quote-left"></i> Quality Education is the Stepping Stone for your Child’s Future <i class="fas fa-quote-right"></i></p>
-      <div class="footer-small">© St. Anthony’s Nursery & Primary – Mutungo</div>
-    </footer>
-  </div>
+  <main>
+    <!-- hero section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>ST. ANTHONY’S NURSERY & PRIMARY SCHOOL – MUTUNGO</h1>
+          <p class="motto">"Quality Education is the Stepping Stone for your Child’s Future"</p>
+          <div class="hero-buttons">
+            <a href="admissions.html" class="btn btn-primary">Apply Now <i class="fas fa-arrow-right"></i></a>
+            <a href="contact.html" class="btn btn-outline">Contact Us</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://via.placeholder.com/500x400/0b3b5c/ffffff?text=Happy+Kids" alt="happy children">
+        </div>
+      </div>
+    </section>
+
+    <!-- welcome section -->
+    <section class="welcome">
+      <div class="container welcome-grid">
+        <div class="welcome-content">
+          <h2>Welcome to St. Anthony’s</h2>
+          <p>We provide a <strong>caring, inclusive, and inspiring</strong> environment where every child flourishes. Our balanced approach builds confidence, curiosity, and character from nursery through primary.</p>
+          <p>With <strong>professional teachers, affordable fees, and modern facilities</strong>, we are the perfect start for your child’s journey.</p>
+          <span class="badge-god">GOD WITH US</span>
+        </div>
+        <div class="welcome-image">
+          <img src="https://via.placeholder.com/450x350/a8d5e5/1f3a4b?text=Play+%26+Learn" alt="teacher with children">
+        </div>
+      </div>
+    </section>
+
+    <!-- services / icons section -->
+    <section class="services">
+      <div class="container">
+        <h2 class="section-title">Why families choose us</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-money-bill-wave fa-3x" style="color:#2a9d8f"></i>
+            <h3>Affordable fees</h3>
+            <p>Quality education at a cost that works for you.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-smile fa-3x" style="color:#e9c46a"></i>
+            <h3>Friendly environment</h3>
+            <p>Warm, welcoming atmosphere where children thrive.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-school fa-3x" style="color:#f4a261"></i>
+            <h3>Inspiring nursery</h3>
+            <p>Bright, safe, and engaging early years spaces.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-user-graduate fa-3x" style="color:#1e6091"></i>
+            <h3>Professional teachers</h3>
+            <p>Passionate, qualified educators dedicated to growth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- registration notice (prominent) -->
+    <section class="registration-notice">
+      <div class="container">
+        <div class="notice-card">
+          <i class="fas fa-clipboard-list fa-3x"></i>
+          <div>
+            <h3>📢 Registration for Nursery and Primary is in progress!</h3>
+            <p>Secure your child’s seat today. Limited spaces available.</p>
+          </div>
+          <a href="admissions.html" class="btn btn-light">Enrol now →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- facilities preview cards -->
+    <section class="facilities">
+      <div class="container">
+        <h2 class="section-title">Explore our facilities</h2>
+        <div class="facilities-grid">
+          <div class="facility-card">
+            <img src="https://via.placeholder.com/350x200/6c9fcf/ffffff?text=Nursery+Area" alt="Nursery Area">
+            <div class="card-footer">🌱 Nursery Area</div>
+          </div>
+          <div class="facility-card">
+            <img src="https://via.placeholder.com/350x200/f4d06f/1f3a4b?text=Classroom+Block" alt="Classroom Block">
+            <div class="card-footer">🏫 Classroom Block</div>
+          </div>
+          <div class="facility-card">
+            <img src="https://via.placeholder.com/350x200/dda15e/ffffff?text=Brass+Band" alt="Brass Band">
+            <div class="card-footer">🎺 Brass Band</div>
+          </div>
+          <div class="facility-card">
+            <img src="https://via.placeholder.com/350x200/9c89b8/ffffff?text=Choir" alt="Choir">
+            <div class="card-footer">🎶 Choir</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- call to action section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Start your journey with St. Anthony’s</h2>
+        <p>We’d love to welcome your family. Visit us or apply online.</p>
+        <a href="contact.html" class="btn btn-primary">Contact us today</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer (same on all pages) -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>ST. ANTHONY’S MUTUNGO</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Mutungo – Biina Road</p>
+        <p><i class="fas fa-phone-alt"></i> 0775 799466 • 0776 695439 • 0762 453601</p>
+        <p><i class="fas fa-quote-right"></i> Quality Education is the Stepping Stone for your Child’s Future</p>
+        <p class="badge">GOD WITH US</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p style="margin-top: 1rem;">© 2025 St. Anthony’s. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <!-- external javascript -->
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
 </body>
-</html>
+  </html>

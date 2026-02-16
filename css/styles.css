@@ -85,7 +85,7 @@ body {
 }
 
 .main-nav.open {
-  max-height: 320px; /* enough for menu */
+  max-height: 320px;
 }
 
 .main-nav ul {
@@ -116,7 +116,6 @@ body {
   padding-left: 1.2rem;
 }
 
-/* desktop navigation */
 @media (min-width: 768px) {
   .mobile-toggle {
     display: none;
@@ -145,63 +144,167 @@ body {
   }
 }
 
-/* ---------- hero ---------- */
-.hero {
-  background: linear-gradient(135deg, #f0f9ff 0%, #d2e9fa 100%);
-  padding: 3rem 0;
+/* ---------- HERO CAROUSEL (full width) ---------- */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 80vh;         /* large landscape area */
+  max-height: 700px;
+  min-height: 500px;
+  overflow: hidden;
+  background-color: #1e3b4c; /* fallback */
 }
-.hero-grid {
-  display: grid;
-  gap: 2rem;
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-.hero h1 {
-  font-size: 2rem;
-  color: #05445e;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-.motto {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #2a6f97;
-  margin-bottom: 2rem;
-  font-style: italic;
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
 }
-.hero-buttons {
+
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* overlay content (text & buttons) */
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  align-items: center;
+  background: rgba(5, 40, 60, 0.3); /* semi-transparent overlay to make text pop */
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
 }
-.btn {
-  display: inline-block;
-  padding: 0.9rem 2rem;
-  border-radius: 60px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s;
-  border: 2px solid transparent;
+
+.overlay-content {
+  width: 100%;
 }
-.btn-primary {
-  background: #f4b942;
-  color: #05445e;
-}
-.btn-primary:hover {
-  background: #f0aa2a;
-  transform: translateY(-3px);
-  box-shadow: 0 12px 20px -10px #f4b94280;
-}
-.btn-outline {
-  border: 2px solid #1e6091;
-  color: #1e6091;
-}
-.btn-outline:hover {
-  background: #1e6091;
+
+.overlay-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
   color: white;
 }
-.hero-image img {
-  width: 100%;
-  border-radius: 30px 10px 30px 10px;
-  box-shadow: 20px 20px 0 #2a9d8f20;
+.overlay-content .motto {
+  font-size: 1.3rem;
+  color: #f4e9c0;
+  margin-bottom: 2rem;
+}
+.overlay-content .btn-primary {
+  background: #f4b942;
+  color: #05445e;
+  border: none;
+  text-shadow: none;
+}
+.overlay-content .btn-outline {
+  border: 2px solid white;
+  color: white;
+  text-shadow: none;
+}
+.overlay-content .btn-outline:hover {
+  background: white;
+  color: #05445e;
+}
+
+/* arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(4px);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #05445e;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-arrow:hover {
+  background: #f4b942;
+  color: #022b40;
+}
+.prev {
+  left: 20px;
+}
+.next {
+  right: 20px;
+}
+
+/* indicators (dots) */
+.carousel-indicators {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 12px;
+}
+.indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.indicator.active {
+  background: #f4b942;
+  transform: scale(1.3);
+  border-color: white;
+}
+.indicator:hover {
+  background: white;
+}
+
+/* responsive carousel text */
+@media (max-width: 700px) {
+  .hero-carousel {
+    height: 70vh;
+    min-height: 450px;
+  }
+  .overlay-content h1 {
+    font-size: 1.6rem;
+  }
+  .overlay-content .motto {
+    font-size: 1rem;
+  }
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 /* ---------- welcome section ---------- */
@@ -403,14 +506,11 @@ body {
   margin-top: 0.8rem;
 }
 
-/* responsive tweaks */
+/* responsive grid for welcome */
 @media (min-width: 680px) {
-  .hero-grid, .welcome-grid {
+  .welcome-grid {
     grid-template-columns: 1fr 1fr;
     align-items: center;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
   }
 }
 @media (max-width: 480px) {

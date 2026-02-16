@@ -522,3 +522,35 @@ body {
     width: 100%;
   }
 }
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border-radius: 60px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+.btn-primary {
+  background: #f4b942;
+  color: #05445e;
+}
+.btn-primary:hover {
+  background: #f0aa2a;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px -10px #f4b94280;
+}
+.btn-outline {
+  border: 2px solid #1e6091;
+  color: #1e6091;
+}
+.btn-outline:hover {
+  background: #1e6091;
+  color: white;
+}

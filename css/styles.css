@@ -777,3 +777,211 @@ body {
     font-size: 2.2rem;
   }
 }
+
+
+/* /css/styles.css (additional styles for academics page – add to existing) */
+
+/* ---------- nursery section ---------- */
+.nursery-section {
+  padding: 5rem 0;
+  background: white;
+}
+.nursery-grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+.nursery-text h2 {
+  font-size: 2.5rem;
+  color: #05445e;
+  margin-bottom: 1rem;
+}
+.nursery-text h2 i {
+  margin-right: 0.5rem;
+}
+.nursery-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+.feature-list li {
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.feature-list i {
+  color: #2a9d8f;
+  width: 1.5rem;
+  font-size: 1.2rem;
+}
+.nursery-image img {
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 15px 15px 0 #f4b942;
+}
+
+/* ---------- primary section ---------- */
+.primary-section {
+  background: #f0f7fc;
+  padding: 5rem 0;
+}
+.primary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin: 2.5rem 0 2rem;
+}
+.primary-card {
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px #1e3b4c30;
+  transition: 0.2s;
+}
+.primary-card:hover {
+  transform: translateY(-8px);
+}
+.card-header {
+  padding: 1.2rem;
+  text-align: center;
+}
+.card-header h3 {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0;
+}
+.card-body {
+  padding: 1.8rem 1.5rem 1.8rem;
+}
+.card-body img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 1.2rem;
+}
+.card-body p {
+  color: #1f3a4b;
+}
+.primary-description {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  text-align: center;
+  font-size: 1.15rem;
+  background: #d9eaf5;
+  padding: 1.5rem 2rem;
+  border-radius: 60px;
+  color: #05445e;
+  font-weight: 500;
+}
+
+/* ---------- subjects (with icons) ---------- */
+.subjects {
+  padding: 5rem 0;
+  background: white;
+}
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.subject-card {
+  background: #f6fbfe;
+  padding: 2rem 1rem;
+  border-radius: 40px;
+  text-align: center;
+  transition: 0.2s;
+}
+.subject-card:hover {
+  background: #e6f2fa;
+  transform: scale(1.02);
+}
+.subject-card i {
+  color: #1e6091;
+  margin-bottom: 1rem;
+}
+.subject-card h3 {
+  font-size: 1.3rem;
+  color: #05445e;
+  margin-bottom: 0.4rem;
+}
+.subject-card p {
+  font-size: 0.95rem;
+  color: #2d4b65;
+}
+
+/* ---------- extracurricular (cards with icons overlay) ---------- */
+.extracurricular {
+  background: #eaf3fa;
+  padding: 5rem 0;
+}
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.activity-card {
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 18px 25px -8px #26547c50;
+  transition: 0.2s;
+}
+.activity-card:hover {
+  transform: translateY(-8px);
+}
+.activity-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.activity-icon {
+  position: absolute;
+  top: 130px; /* overlays image bottom */
+  right: 20px;
+  background: #f4b942;
+  color: #05445e;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px #00000030;
+}
+.activity-card h3 {
+  font-size: 1.6rem;
+  color: #05445e;
+  margin: 0.8rem 1rem 0.4rem;
+}
+.activity-card p {
+  padding: 0 1rem 1.5rem 1rem;
+  color: #1f3a4b;
+}
+
+/* ---------- responsive ---------- */
+@media (min-width: 768px) {
+  .nursery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .activity-icon {
+    top: 140px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+  .primary-description {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+}

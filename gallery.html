@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | St. Anthony's Mutungo</title>
+  <!-- Google Fonts + Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- external CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- navigation (consistent across all pages) -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo-area">
+        <img src="https://via.placeholder.com/50x50/2c7da0/ffffff?text=SA" alt="school logo" class="logo-img">
+        <span class="logo-text">ST. ANTHONY'S <small>Mutungo</small></span>
+      </div>
+      <button class="mobile-toggle" aria-label="menu" id="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HEADER BANNER ========== -->
+    <section class="page-banner" style="background: linear-gradient(135deg, #1e6091, #2a9d8f);">
+      <div class="container">
+        <h1>School Gallery</h1>
+        <div class="banner-divider"></div>
+        <p>Moments of joy, learning, and togetherness</p>
+      </div>
+    </section>
+
+    <!-- ========== IMAGE GALLERY GRID (with captions & hover effects) ========== -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- 1. Nursery breakfast -->
+          <div class="gallery-item" data-index="0">
+            <img src="https://via.placeholder.com/600x400/e9c46a/1f3a4b?text=Nursery+Breakfast" alt="Nursery breakfast time">
+            <div class="caption">🍽️ Nursery breakfast</div>
+          </div>
+          <!-- 2. PE lesson -->
+          <div class="gallery-item" data-index="1">
+            <img src="https://via.placeholder.com/600x400/2a9d8f/ffffff?text=PE+Lesson" alt="PE lesson outdoors">
+            <div class="caption">⚽ PE lesson</div>
+          </div>
+          <!-- 3. Choir performance -->
+          <div class="gallery-item" data-index="2">
+            <img src="https://via.placeholder.com/600x400/9c89b8/ffffff?text=Choir+Performance" alt="Choir performing">
+            <div class="caption">🎤 Choir performance</div>
+          </div>
+          <!-- 4. Blessing mass -->
+          <div class="gallery-item" data-index="3">
+            <img src="https://via.placeholder.com/600x400/f4a261/2d2d2d?text=Blessing+Mass" alt="Blessing mass ceremony">
+            <div class="caption">🙏 Blessing mass</div>
+          </div>
+          <!-- 5. Brass band -->
+          <div class="gallery-item" data-index="4">
+            <img src="https://via.placeholder.com/600x400/dda15e/1f3a4b?text=Brass+Band" alt="Brass band practice">
+            <div class="caption">🎺 Brass band</div>
+          </div>
+          <!-- 6. Study tour -->
+          <div class="gallery-item" data-index="5">
+            <img src="https://via.placeholder.com/600x400/76c893/1e2b37?text=Study+Tour" alt="Study tour to museum">
+            <div class="caption">🚌 Study tour</div>
+          </div>
+          <!-- 7. Graduation -->
+          <div class="gallery-item" data-index="6">
+            <img src="https://via.placeholder.com/600x400/1e6091/ffffff?text=Graduation+Day" alt="P7 graduation ceremony">
+            <div class="caption">🎓 Graduation</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== LIGHTBOX MODAL (hidden by default) ========== -->
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close"><i class="fas fa-times"></i></span>
+      <span class="lightbox-prev"><i class="fas fa-chevron-left"></i></span>
+      <span class="lightbox-next"><i class="fas fa-chevron-right"></i></span>
+      <div class="lightbox-content">
+        <img src="" alt="" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+    </div>
+
+    <!-- subtle CTA back to admissions (optional) -->
+    <section class="cta-light">
+      <div class="container">
+        <p>Experience our vibrant school life — come for a tour</p>
+        <a href="contact.html" class="btn btn-primary">Schedule a visit</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer (consistent) -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>ST. ANTHONY’S MUTUNGO</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Mutungo – Biina Road</p>
+        <p><i class="fas fa-phone-alt"></i> 0775 799466 • 0776 695439 • 0762 453601</p>
+        <p><i class="fas fa-quote-right"></i> Quality Education is the Stepping Stone for your Child’s Future</p>
+        <p class="badge">GOD WITH US</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p style="margin-top: 1rem;">© 2025 St. Anthony’s. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- external javascript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
